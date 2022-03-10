@@ -1,0 +1,9 @@
+steps:
+  - label: 'Setup'
+    command: ./XCode.sh && ./install_obsolete_jsoncpp_1_7_4.sh
+  - wait
+  - label: Setup
+    command: bash . ./setup.sh
+  - label: Make
+    command: bash . ./001.sh
+    key: push-credentials
